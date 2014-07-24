@@ -1,8 +1,6 @@
 <?php
-for ($index = 0; $index <= 10; ++$index) {
-    if ($index == 2) {
-        continue;
-    }
-    echo "Current index is $index <br />";
-}
+$array = array("blue", "red", "green", "blue", "blue");
+var_dump($array);
+print_r(array_keys($array, "blue"));
+print_r(array_values($array));
 ?>
