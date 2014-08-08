@@ -1,0 +1,8 @@
+1. Tạo 1 file php có tên là form_user.php. Trong file đó, tạo 1 form HTML để đăng ký thông tin 1 user với các field:
+Fullname (textbox)
+Email (textbox)
+Age (textbox)
+Gender (selectbox)
+Sau khi submit, form sẽ chuyển đến trang create_user.php để xử lý dữ liệu
+2. Tạo file create_user.php, nhận dữ liệu từ form form_user.php. Lưu thông tin vào file users.txt, mỗi user cách nhau 1 dòng. Sau khi lưu xong thông tin, hiện ra thông báo đăng ký thành công, cùng với button/link Next để đến trang list_users.php
+3. Tạo file list_users.php, đọc dữ liệu từ file users.txt rồi hiển thị thông tin các users đăng ký trong 1 HTML table.
