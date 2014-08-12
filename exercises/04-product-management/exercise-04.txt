@@ -15,7 +15,7 @@ Dựa vào những trang đã làm ở bài tập 2 và 3, làm điều tương 
 		iii) quantity (textbox)
 		iv) price (textbox)
 		v) image (file upload)
-		vi) description (text)
+		vi) description (textarea)
 	b. Tương tự cho các trang: create_product.php, list_products.php, view_product.php, edit_product.php, delete_product.php	
 	
 		
