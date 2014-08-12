@@ -1,0 +1,6 @@
+1. Tiếp tục exercise 02-create-user-and-store-in-database
+2. Ở trang list_users.php, với mỗi user được liệt kê, add thêm 3 nút: View - Edit - Delete
+	- View: Chuyển qua trang user_info.php để xem thông tin chi tiết của user được chọn
+	- Edit: Chuyển qua trang user_edit.php, trong đó hiển thị form để chỉnh sửa thông tin user (tương tự form add user)
+	- Delete: Xoá thông tin user trong database. Sau khi xoá xong thì hiện thị lại danh sách user (list_users.php)
+3. Tạo các trang user_info.php, user_edit.php
