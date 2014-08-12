@@ -44,8 +44,8 @@
                     <td><?php echo $rows['gender'];?></td>
                     <td>
                         <a href="view_user.php?id=<?php echo $rows['id'];?>">View</a>&nbsp;|&nbsp;
-                        <a href="delete_user.php">Delete</a>&nbsp;|&nbsp;
-                        <a href="edit_user.php">Edit</a>
+                        <a href="delete_user.php?id=<?php echo $rows['id'];?>" onclick="javascript:return confirm('Are you sure to delete this user?');">Delete</a>&nbsp;|&nbsp;
+                        <a href="edit_user.php?id=<?php echo $rows['id'];?>">Edit</a>
                     </td>
                 </tr>
                 <?php } ?>
