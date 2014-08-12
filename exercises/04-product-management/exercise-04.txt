@@ -1,0 +1,21 @@
+Dựa vào những trang đã làm ở bài tập 2 và 3, làm điều tương tự với phần quản lý sản phẩm 
+1. Tạo table có tên là products (bằng phpMyAdmin), có các field sau:
+	1. id (khoá chính, auto_increment).
+	2. code (varchar 40)
+	3. name (varchar 200)
+	4. quantity (int)
+	5. price (int)
+	6. product_image
+	7. description
+	
+2. Tạo các trang tương tự bài tập 2 và 3
+	a. form_product.php - Dùng để nhập product vào hệ thống với các field:
+		i) code (textbox)
+		ii) name (textbox)
+		iii) quantity (textbox)
+		iv) price (textbox)
+		v) image (file upload)
+		vi) description (text)
+	b. Tương tự cho các trang: create_product.php, list_products.php, view_product.php, edit_product.php, delete_product.php	
+	
+		
