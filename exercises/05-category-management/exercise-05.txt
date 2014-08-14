@@ -1,0 +1,8 @@
+Quản lý danh mục sản phẩm
+1. Tạo table có tên là categorys (bằng phpMyAdmin), có các field sau:
+	1. id (khoá chính, auto_increment).
+	2. name (varchar 40)
+	
+2. Tạo các trang tương tự bài tập 4 để nhập, xem danh sách, xem chi tiết, chỉnh sửa, xoá 1 category 
+	
+		
