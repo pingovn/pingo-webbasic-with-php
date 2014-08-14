@@ -56,14 +56,14 @@ padding: 15px;
 	<tr>
 		<td>
 			<div class = "content">
-				<p>Code : <?echo $rows['code'];?></p>
-				<p>Tên Sản phẩm : <?echo $rows['name'];?></p>
-				<p>Số Lượng : <?echo $rows['quantity'];?></p>
-				<p>Giá : <?echo $rows['price'];?></p>
-				<p>Mô tả : <?echo $rows['description'];?></p>
+				<p>Code : <?=$rows['code'];?></p>
+				<p>Tên Sản phẩm : <?=$rows['name'];?></p>
+				<p>Số Lượng : <?=$rows['quantity'];?></p>
+				<p>Giá : <?=$rows['price'];?></p>
+				<p>Mô tả : <?=$rows['description'];?></p>
 			</div>
 			<div class = "image">
-				<img src="./<?echo $rows['product_image']?> "width="300" height="300">
+				<img src="./<?=$rows['product_image']?> "width="300" height="300">
 			</div>		
 		</td>
 	</tr>	

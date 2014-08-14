@@ -31,6 +31,7 @@ if(isset($_POST['code'])){
 				"VALUES".
 				"('".$_POST['code']."', '".$_POST['name']."', '".$_POST['quantity']."', '".$_POST['price']."', '".$url."', '".$_POST['des']."')";
 
+        echo $query; die();
 		mysql_query($query,$conn);
     }
 		

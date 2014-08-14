@@ -51,7 +51,7 @@ body {
 }
 </style>
 <body>
-	<?php if(mysql_num_rows($result)) {?>
+	<?php if (mysql_num_rows($result)) { ?>
 		<p align = "center" class="top"> Danh sách sản phẩm</p>
 		<table class ="list" align = "center">
 		<tr>
@@ -63,39 +63,38 @@ body {
 			<td class = "left">Mô tả sản phẩm</td>
 			<td class = "center">Thao tác</td>
 		</tr>
-	 <? while ($rows = mysql_fetch_array( $result )){?>
+	 <?php while ($rows = mysql_fetch_array( $result )){ ?>
 		 	<tr>
-		 	<td class = "left"><? echo $rows['code']?></td>
-		 	<td class = "left"><? echo $rows['name']?></td>
-		 	<td class = "right"><? echo $rows['quantity']?></td>
-		 	<td class = "right"><? echo $rows['price']?></td>
-		 	<td class = "center"><img src="./<?echo $rows['product_image']?>" width="44" height="44" ></td>
-		 	<td class = "left"><? echo $rows['description']?></td>
+		 	<td class = "left"><?php echo $rows['code']?></td>
+		 	<td class = "left"><?php echo $rows['name']?></td>
+		 	<td class = "right"><?php echo $rows['quantity']?></td>
+		 	<td class = "right"><?php echo $rows['price']?></td>
+		 	<td class = "center"><img src="./<?php echo $rows['product_image']?>" width="44" height="44" ></td>
+		 	<td class = "left"><?php echo $rows['description']?></td>
 		 	<td class = "center" >
   
                	<form action = "view_product.php" method = "POST">
-                   		<input type = "hidden" value= "<? echo $rows['id']; ?>" name="id_view" id ="id_view">
+                   		<input type = "hidden" value= "<?php echo $rows['id']; ?>" name="id_view" id ="id_view">
                    		<input type="submit" value="View"  name="submit" id="submit" />
                    </form>
                 <form action = "form_edit_product.php" method = "POST">
-                   		<input type = "hidden" value= "<?echo $rows['id']; ?>" name="id_edit" id ="id_edit">                  		 
+                   		<input type = "hidden" value= "<?=$rows['id']; ?>" name="id_edit" id ="id_edit">                  		 
                    		<input type="submit" value="Edit"  name="submit" id="submit" />
                    </form>
                    <form action = "delete_product.php" method = "POST">
-                   		<input type = "hidden" value= "<?echo $rows['id']; ?>" name="id_delete" id ="id_delete">           		 
+                   		<input type = "hidden" value= "<?=$rows['id']; ?>" name="id_delete" id ="id_delete">           		 
                    		<input type="submit" value="Delete"  name="submit" id="submit" onclick="javascript:return confirm('Are you sure to delete this user?');"/>
                    </form>
                 </td>
 		 </tr>
-		 <?}?>
+		 <?php } ?>
 	 </table>
-	<?}else {?>
+	<?php } else { ?>
 		<p align = "center" style ="font-family: Arial; font-size :20px ; "> Không có sản phẩm</p>
-		
-	<?}?>
+	<?php } ?>
 		<p align = "center" class="top">Bạn muốn <a href="form_product.php">Thêm sản phẩm</a></p>
 </body>
 
 </head>
 </html>
-<?mysql_close($conn);?>
+<?php mysql_close($conn);?>

@@ -45,28 +45,28 @@ body {
 		<tr ><p align = "center" class="top">Chỉnh sửa thông tin sản phẩm</p></tr>
 		<tr>
 		<td>Code :</td>
-			<td><input type ="text" id = "code" name="code" value =<?echo $rows['code']?>></td>
+			<td><input type ="text" id = "code" name="code" value =<?=$rows['code']?>></td>
 		</tr>
 		<tr>
 			<td>Tên Sản Phẩm :</td>
-			<td><input type ="text" id = "name" name="name" value =<?echo $rows['name']?>></td>
+			<td><input type ="text" id = "name" name="name" value ="<?=$rows['name']?>"></td>
 		</tr>
 		<tr>
 			<td>Số Lượng:</td>
-			<td><input type ="text" id = "quantity" name="quantity" value =<?echo $rows['quantity']?>></td>
+			<td><input type ="text" id = "quantity" name="quantity" value =<?=$rows['quantity']?>></td>
 		</tr>
 		<tr>
 			<td>Giá :</td>
-			<td><input type ="text" id = "price" name="price" value =<?echo $rows['price']?>></td>
+			<td><input type ="text" id = "price" name="price" value =<?=$rows['price']?>></td>
 		</tr>
 		<tr>
 			<td>Hình ảnh</td>
-			<td><input type="file" name="file" id="file" value =<?echo $rows['product_image']?>></td>
-			<td><img src="<?echo $rows['product_image']?>" width="44" height="44"></td>
+			<td><input type="file" name="file" id="file" value =<?=$rows['product_image']?>></td>
+			<td><img src="<?=$rows['product_image']?>" width="44" height="44"></td>
 		</tr>	
 		<tr>
 			<td>Mô tả Sản Phẩm :</td>
-			<td><textarea rows="4" cols="50" id = "des" name ="des" ><?echo $rows['description']?></textarea></td>
+			<td><textarea rows="4" cols="50" id = "des" name ="des" ><?=$rows['description']?></textarea></td>
 		</tr>	
 		<tr>
 			<td></td>
@@ -74,7 +74,7 @@ body {
 		
 		</tr>	
 	</table>
-	<input type ="hidden" name="id" id="id" value="<?echo $rows['id']?>">
+	<input type ="hidden" name="id" id="id" value="<?=$rows['id']?>">
 </form>
 </body>
 </html>
