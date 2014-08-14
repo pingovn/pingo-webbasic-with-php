@@ -15,6 +15,14 @@
 	}
 	
 	$info = mysql_fetch_array($result);
+
+    $query = "SELECT * FROM categories;";
+    $result = mysql_query($query, $conn);
+    $categories = array();
+    while ($row = mysql_fetch_array($result)) {
+        $categories[] = $row;
+    }
+
 ?>
 
 <html>
@@ -45,6 +53,18 @@
 						<input type="hidden" name="MAX_FILE_SIZE" value="2048000">
 						<td><input name ='img_file' type = 'file' size = '24' id = 'img_file' "></td>
 					</tr>
+                    <tr>
+                        <td>Category:</td>
+                        <td><select name="category_id">
+                                <?php foreach ($categories as $category) : ?>
+                                    <option value="<?=$category['id'];?>"
+                                        <?php if ($info['category_id'] == $category['id']) :?>
+                                        selected="selected"
+                                        <?php endif ?>
+                                    ><?=$category['name'];?></option>
+                                <?php endforeach ?>
+                            </select></td>
+                    </tr>
 					<tr>
 						<td>Description:</td>
 						<td><textarea rows="11" cols="29" name='description' id='description'><?php echo $info['description'];?></textarea></td>

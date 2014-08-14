@@ -12,26 +12,19 @@
 		$price=$_POST['price'];
 		$description=$_POST['description'];
 		$id=$_POST['id'];
-		
-		if (($_FILES["img_file"]["type"] != "image/gif") &&
-				($_FILES["img_file"]["type"] != "image/png") &&
-				($_FILES["img_file"]["type"] != "image/jpeg")&&
-				($_FILES["img_file"]["type"] != "image/pjpeg")){
-			echo "<script language='javascript'>alert('Kieu file khong hop le');";
-			echo "location.href='form_product.php';</script>";
-		} else{
+		$categoryId = $_POST['category_id'];
 			$img=$_FILES['img_file']['name'];
 			$link_img='uploads/'.$img;
 			$query = "UPDATE products
 					  SET code='$code', name='$name', quantity='$quantity', 
-					  price='$price', product_image='$link_img', description='$description'
+					  price='$price', product_image='$link_img', description='$description',
+					  category_id='$categoryId'
 				 	  WHERE id='$id' ";
-		//echo $query; die();
+		// echo $query; die();
 		//var_dump($query); die();
 		$result=mysql_query($query);
 		mysql_free_result($result);
-		move_uploaded_file($_FILES['img_file']['tmp_name'],"uploads/".$img);	
-		}
+		// move_uploaded_file($_FILES['img_file']['tmp_name'],"uploads/".$img);
 	}
 
 	header("Location: view_product.php?id=" .$id);

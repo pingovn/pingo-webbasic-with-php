@@ -2,9 +2,11 @@
 	$conn=mysql_connect("localhost","root","") or die("Could not connect to database");
 	mysql_select_db("exercise") or die("Could not select database");
 
-	$query = "SELECT * FROM products";
+	$sql = "SELECT products.*, categories.name as category_name
+	        FROM products
+	        INNER JOIN categories ON products.category_id = categories.id";
 			
-	$result = mysql_query($query,$conn);
+	$result = mysql_query($sql,$conn);
 ?>
 
 <html>
@@ -34,6 +36,7 @@
                     <th width="10%">Quantity</th>
                     <th width="10%">Price</th>
                     <th width="10%">Image</th>
+                    <th width="10%">Category</th>
                     <th width="20%">Description</th>
                     <th width="20%">Action</th>
                 </tr>
@@ -46,6 +49,7 @@
                     <td><?php echo $rows['quantity'];?></td>
                     <td><?php echo $rows['price'];?></td>
                     <td><?php echo $rows['product_image'];?></td>
+                    <td><?php echo $rows['category_name'];?></td>
                     <td><?php echo $rows['description'];?></td>
                     <td>
                     	<a href="view_product.php?id=<?php echo $rows['id'];?>">View</a>&nbsp;|&nbsp;

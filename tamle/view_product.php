@@ -17,6 +17,10 @@
 	}
 	
 	$info = mysql_fetch_array($result);
+
+    $query = "SELECT name FROM categories WHERE id = " . $info['category_id'];
+    $result = mysql_query($query, $conn);
+    $category = mysql_fetch_array($result);
 ?>
 <html>
     <head>
@@ -43,7 +47,8 @@
                     <th width="20%">Name</th>
                     <th width="10%">Quantity</th>
                     <th width="10%">Price</th>
-                    <th width="30%">Image</th>
+                    <th width="15%">Image</th>
+                    <th width="15%">Category</th>
                     <th width="20%">Description</th>
                 </tr>
                 <tr>
@@ -53,6 +58,7 @@
                     <td><?php echo $info['quantity'];?></td>
                     <td><?php echo $info['price'];?></td>
                     <td><?php echo $info['product_image'];?></td>
+                    <td><?php echo $category['name'];?></td>
                     <td><?php echo $info['description'];?></td>
                 </tr>
             </table>

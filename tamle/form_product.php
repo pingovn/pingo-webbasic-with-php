@@ -1,3 +1,13 @@
+<?php
+$conn=mysql_connect("localhost","root","") or die("Could not connect to database");
+mysql_select_db("exercise") or die("Could not select database");
+$query = "SELECT * FROM categories;";
+$result = mysql_query($query, $conn);
+$rows = array();
+while ($row = mysql_fetch_array($result)) {
+    $rows[] = $row;
+}
+?>
 <html>
 	<head><title>Form Product</title></head>
 	<body>
@@ -25,9 +35,17 @@
 						<td>Image:</td>
 						<input type="hidden" name="MAX_FILE_SIZE" value="5000000">
 						<td><input name ='img_file' type = 'file' size = '24' id = 'img_file'></td>
-					</tr>
+                    </tr>
+                    <tr>
+                        <td>Category:</td>
+                        <td><select name="category_id">
+                            <?php foreach ($rows as $row) : ?>
+                                <option value="<?=$row['id'];?>"><?=$row['name'];?></option>
+                            <?php endforeach ?>
+                        </select></td>
+                    </tr>
 					<tr>
-						<td>Description:</td>
+						<td>Description:<
 						<td><textarea rows="11" cols="29" name='description' id='description'></textarea></td>
 					</tr>
 					<tr>
