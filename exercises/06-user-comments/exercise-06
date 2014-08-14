@@ -1,0 +1,18 @@
+1. Tạo table có tên là users (nếu chưa có) bao gồm các fields
+- id (int, PK, auto-increment)
+- fullname (varchar 100)
+- age (int)
+- avatar (varchar)
+- gender (varchar 10)
+- opcupation (varchar 1000)
+
+2. Tạo table comments bao gồm các fields
+- id (int, PK, auto-increment)
+- author (varchar 100)
+- comment (text)
+- user_id (int)
+
+3. Tạo các trang để add/list/view/edit/delete user dựa vào thông tin database trên (có upload/update avatar).
+4. Ở trang xem thông tin chi tiết user (view_user.php), show form add comment và danh sách các comment như hình vẽ user.jpg
+5. Form add comment sẽ post lên trang add_comment.php để xử lý.
+5. Lập trình trang add_comment.php, nhận data từ form add comment ở trang view_user.php, lưu vào database thông tin comment rồi hiển thị lại trang view_user.php với comment mới nhất đưa lên trên.
