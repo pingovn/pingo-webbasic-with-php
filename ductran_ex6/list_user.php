@@ -25,7 +25,7 @@
 			<td class = "right">Age</td>
 			<td class = "center">Gender</td>
 			<td class = "left">Opcupation </td>
-			<td class = "center">Action</td>
+			<td class = "center" width="100">Action</td>
 		</tr>
 	 <?php while ($rows = mysql_fetch_array( $result )){?>
 		 	<tr>
@@ -37,21 +37,12 @@
 		 	
 		 		<td class = "left"><?php echo $rows['opcupation']?></td>
 		 		<td class = "center" >
-  
-           	    	<form action = "view_user.php" method = "POST">
-                   		<input type = "hidden" value= "<?php echo $rows['id']; ?>" name="id_view" id ="id_view">
-                   		<input type="submit" value="View"  name="submit" id="submit" />
-                   </form>
-           	     <form action = "form_edit_user.php" method = "POST">
-                   		<input type = "hidden" value= "<?php echo $rows['id']; ?>" name="id_edit" id ="id_edit">                  		 
-                   		<input type="submit" value="Edit"  name="submit" id="submit" />
-                   </form>
-                   <form action = "delete_user.php" method = "POST">
-                   		<input type = "hidden" value= "<?php echo $rows['id']; ?>" name="id_delete" id ="id_delete">           		 
-                   		<input type="submit" value="Delete"  name="submit" id="submit" onclick="javascript:return confirm('Are you sure to delete this user?');"/>
-                   </form>
+                    <a href="#" onclick="return submitForm('view_user.php', '<?php echo $rows['id']; ?>');">View</a> |
+                    <a href="#" onclick="return submitForm('form_edit_user.php', '<?php echo $rows['id']; ?>');">Edit</a> |
+                    <a href="#" onclick="return submitForm('delete_user.php', '<?php echo $rows['id']; ?>');">Delete</a>
                 </td>
-			 </tr>
+                <input type="submit" value="Delete"  name="submit" id="submit" onclick="javascript:return confirm('Are you sure to delete this user?');"/>
+            </tr>
 		 <?php }?>
 	 </table>
 	<?php }else {?>
@@ -59,7 +50,31 @@
 		
 	<?php }?>
 		<p align = "center" class="top">You want <a href="form_user.php">Register User</a></p>
+    <form id="actionForm" action="" method="post">
+        <input type="hidden" name="id_view" id="link_view" value="">
+        <input type="hidden" name="id_edit" id="link_edit" value="">
+        <input type="hidden" name="id_delete" id="link_delete" value="">
+    </form>
 </body>
 
 </html>
 <?php mysql_close($conn);?>
+<script type="text/javascript">
+function submitForm(action, userId) {
+    // Submit form here
+    var form = document.getElementById("actionForm");
+    var linkView = document.getElementById("link_view");
+    var linkEdit = document.getElementById("link_edit");
+    var linkDelete = document.getElementById("link_delete");
+    linkView.value = userId;
+    linkEdit.value = userId;
+    linkDelete.value = userId;
+    form.action = action;
+    if (action == "delete_user.php") {
+        return confirm('Are you sure to delete this user?');
+    }
+    form.submit();
+    return false;
+
+}
+</script>

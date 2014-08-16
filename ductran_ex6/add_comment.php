@@ -10,6 +10,7 @@ include("fun.php");
 			"VALUES".
 			"('".$_POST['yourname']."', '".$_POST['yourcomment']."', '".$_POST['user_id']."')";
 
+//    var_dump($query); die();
 	mysql_query($query,$conn);
 	mysql_close($conn);
 ?>
