@@ -2,8 +2,36 @@
 
 include("fun.php");
     $conn = connect();
+
+for ($index = 0; $index < 100; $index++) {
+    $fullname = "Test user " . $index;
+    $email = "testemail{$index}@gmail.com";
+    $query = "INSERT INTO user".
+    "(fullname, email, age,gender,avatar,opcupation)".
+    "VALUES".
+    "('".$fullname."', '".$email."', '".rand(20, 40)."', 'Male', 'data/nokia-3310.jpg', 'Teacher')";
+    mysql_query($query, $conn);
+}
+echo "Insert successfully";
+mysql_close($conn);
+die();
     $url='';
     $suc = 0;
+$post = $_POST;
+$post['age'] = intval($post['age']);
+if ($post['age'] < 1 || $post['age'] > 100) {
+    header("Location: form_user.php?msg=Tuổi không phù hợp");
+    edit;
+}
+if ($post['gender'] != "Male" || $post['gender'] != "Female") {
+    header("Location: form_user.php?msg=Giới tính không phù hợp");
+    edit;
+}
+if (!preg_match('//', $post['email'])) {
+    header("Location: form_user.php?msg=Email không phù hợp");
+    edit;
+}
+
 if(isset($_POST['fullname'])){
     if($_FILES['file']['type'] == "image/jpeg"
         || $_FILES['file']['type'] == "image/png"

@@ -4,8 +4,27 @@
 	//$conn=mysql_connect("localhost","root","") or die("Could not connect to database");
 	//mysql_select_db("baitap6") or die("Could not select database");
 
-	$query = "SELECT * FROM user";
-			
+    $perPage = 2;
+    $sql = "SELECT COUNT(*) as cnt FROM user";
+    $res = mysql_query($sql, $conn);
+    $cnt = mysql_fetch_array($res);
+    $totalRows = $cnt['cnt'];
+    $totalPages = intval(ceil($totalRows / $perPage));
+    $interval = 2;
+
+    $currentPage = isset($_GET['page']) ? intval($_GET['page']) : 1;
+    if ($currentPage == 0) {
+        $currentPage = 1;
+    }
+    if ($currentPage > $totalPages) {
+        $currentPage = $totalPages;
+    }
+
+    $from = ($currentPage - 1) * $perPage;
+
+
+$query = "SELECT * FROM user ORDER BY fullname ASC LIMIT $from, $perPage";
+
 	$result = mysql_query($query,$conn);
 ?>
 <html>
@@ -41,10 +60,18 @@
                     <a href="#" onclick="return submitForm('form_edit_user.php', '<?php echo $rows['id']; ?>');">Edit</a> |
                     <a href="#" onclick="return submitForm('delete_user.php', '<?php echo $rows['id']; ?>');">Delete</a>
                 </td>
-                <input type="submit" value="Delete"  name="submit" id="submit" onclick="javascript:return confirm('Are you sure to delete this user?');"/>
             </tr>
 		 <?php }?>
 	 </table>
+        <div>
+         <?php for ($page = $currentPage - $interval; $page <= $currentPage + $interval; $page++) :?>
+             <?php if ($page == $currentPage) : ?>
+                 <?=$page?>
+             <?php else: ?>
+                 <a href="?page=<?=$page?>"><?=$page?></a>
+             <?php endif ?>
+         <?php endfor ?>
+     </div>
 	<?php }else {?>
 		<p align = "center" style ="font-family: Arial; font-size :20px ; "> NOT USER</p>
 		
