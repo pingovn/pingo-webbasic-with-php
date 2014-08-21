@@ -1,0 +1,230 @@
+body {
+    background-image: url("back.jpg") ;
+}
+.content{
+float: right;
+width: 60%;
+padding: 15px;
+ margin-left: 100px;
+ font-size: 20px;
+ margin-top: 45px;
+}
+.image{
+	padding: 45px;
+	float: left;
+}
+.image_comment{
+	padding:10px;
+	float: left;
+}
+.table{
+	margin-left: 200px;
+	width: 80%;
+
+}
+.top
+{
+		padding: 30px;
+		font-size: 25px;
+		color: red;
+}
+.comment{
+	padding-top: 50px;
+	padding-left: 70px;
+	float: left;	
+	width: 60%;
+	font-size: 20px;
+	margin-left: 20%;
+}
+.cmd{
+	padding: 10px;
+}
+.cmd1{
+	padding-left: 96px;	
+	padding-top: 10px;
+}
+.viewcmd{
+	padding: 10px;
+	background-color: #A9A9A9;
+}
+.viewcmd1{
+	padding: 20px;
+	background-color: #A9A9A9;
+}
+
+.list {
+	border-collapse: collapse;
+	width: 90%;
+	border-top: 1px solid #DDDDDD;
+	border-left: 1px solid #DDDDDD;
+	margin-bottom: 20px;
+
+	background-color: #EFEFEF;
+
+}
+.buttonxoa{
+	background-image: url(./data/xoa.jpg);
+	background-color: #FF0000;
+	/*border-radius: 6px;*/
+	width: 20px;
+	height: 20px;
+
+}
+.list td {
+	border-right: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+}
+.list tbody tr:hover td {
+	background-color: #FFFFCB;
+}
+.list .left {
+	text-align: left;
+	padding: 7px;
+}
+.list .right {
+	text-align: right;
+	padding: 7px;
+}
+.list .center {
+	text-align: center;
+	padding: 7px;
+}
+.top
+{
+		padding: 30px;
+		font-size: 25px;
+		color: red;
+}
+.button_add{
+	font-family: Arial;
+	font-size: 12px;
+	padding: 10px;
+}
+.text{
+	font-size: 20px;
+	font-family: Arial;
+}
+
+.menuform{
+	margin-left: 35%;
+	position: center;
+}
+ul.topnav {
+
+    list-style: none;
+
+    padding: 0 20px;
+
+    margin: 0;
+
+    float: left;
+
+    width: 920px;
+
+    background: #222;
+
+    font-size: 1.2em;
+
+    background: url(topnav_bg.gif) repeat-x;
+
+}
+
+ul.topnav li {
+
+    float: left;
+
+    margin: 0;
+
+    padding: 0 15px 0 0;
+
+    position: relative; /*--Declare X and Y axis base for sub navigation--*/
+
+}
+
+ul.topnav li a{
+
+    padding: 10px 5px;
+
+    color:#333333;
+
+    display: block;
+
+    text-decoration: none;
+
+    float: left;
+
+}
+
+ul.topnav li a:hover{
+
+    background: url(topnav_hover.gif) no-repeat center top;
+
+}
+
+ul.topnav li span { /*--Drop down trigger styles--*/
+
+    width: 17px;
+
+    height: 35px;
+
+    float: left;
+
+    background: url(subnav_btn.gif) no-repeat center top;
+
+}
+
+ul.topnav li span.subhover {background-position: center bottom; cursor: pointer;} /*--Hover effect for trigger--*/
+
+ul.topnav li ul.subnav {
+
+    list-style: none;
+
+    position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/
+
+    left: 0; top: 35px;
+
+    background: #333;
+
+    margin: 0; padding: 0;
+
+    display: none;
+
+    float: left;
+
+    width: 170px;
+
+    border: 1px solid #111;
+
+}
+
+ul.topnav li ul.subnav li{
+
+    margin: 0; padding: 0;
+
+    border-top: 1px solid #252525; /*--Create bevel effect--*/
+
+    border-bottom: 1px solid #444; /*--Create bevel effect--*/
+
+    clear: both;
+
+    width: 170px;
+
+}
+
+html ul.topnav li ul.subnav li a {
+
+    float: left;
+
+    width: 145px;
+
+    background: #333 url(dropdown_linkbg.gif) no-repeat 10px center;
+
+    padding-left: 20px;
+
+}
+
+html ul.topnav li ul.subnav li a:hover { /*--Hover effect for subnav links--*/
+
+    background: #222 url(dropdown_linkbg.gif) no-repeat 10px center;
+
+} 

@@ -1,0 +1,94 @@
+body {
+}
+.image{
+	padding: 45px;
+	float: left;
+}
+.table_login {
+    border-bottom: thin  solid black;
+    border-top:    thin  solid black;
+    border-left:   thin  solid black;
+    border-right:  thin  solid black;
+    
+}
+.table_login td {
+    alignment-adjust: central;
+    width: 100px;
+    border: thin solid black;
+}
+
+
+.table_avatar {
+    alignment-adjust: central;
+}
+
+.table_fix_info {
+    width: 100px;
+}
+
+.td_avatar  {
+    width: 150px;
+    height: 150px;
+}
+
+.table_comment {
+    width: 60%;
+    border-bottom: thin  solid black;
+    border-top:    thin  solid black;
+    border-left:   thin  solid black;
+    border-right:  thin  solid black;
+}
+
+.table_old_comment {
+    width: 60%;
+    border-bottom: thin  solid black;
+    border-top:    thin  solid black;
+    border-left:   thin  solid black;
+    border-right:  thin  solid black;
+}
+.table_old_comment .td_old_avatar {
+    width: 12%;
+    
+} 
+.deletecomd{
+	margin-left: 55%;
+	float: right;
+	 
+}
+.deletecomd .delete_button {
+	background-image: url(./delete_button.jpg);
+	border-radius: 6px;
+	width: 21px;
+	height: 21px;
+
+}
+    
+
+form {
+    margin-top: 5px;
+    margin-bottom: 0em;
+}
+.list{
+    width: 900px; 
+    border-bottom: thin  solid black;
+    border-top:    thin  solid black;
+    border-left:   thin  solid black;
+    border-right:  thin  solid black;
+    cellpadding:0px;
+}
+.list td {
+    border: thin solid black;
+}
+.list .left {
+	text-align: left;
+}
+.list .right {
+	text-align: right;
+}
+.list .center {
+	text-align: center;
+}
+table {
+    width: auto;
+}
+

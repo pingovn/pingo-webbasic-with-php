@@ -1,0 +1,141 @@
+@CHARSET "UTF-8";
+body {
+    background-image: url("images/bg.jpg") ;
+}
+.content{
+float: right;
+width: 60%;
+padding: 15px;
+ margin-left: 100px;
+ font-size: 20px;
+ margin-top: 45px;
+}
+.image{
+	padding: 45px;
+	float: left;
+	
+
+}
+.table{
+	margin-left: 200px;
+	width: 80%;
+
+}
+.top
+{
+		padding: 30px;
+		font-size: 25px;
+		color: red;
+}
+.comment{
+	padding-top: 50px;
+	padding-left: 70px;
+	float: left;	
+	width: 60%;
+	font-size: 20px;
+	margin-left: 20%;
+}
+.cmd{
+	padding: 10px;
+}
+.cmd1{
+	padding-left: 96px;	
+	padding-top: 10px;
+}
+.viewcmd{
+	padding: 10px;
+	background-color: #A9A9A9;
+}
+.viewcmd1{
+	padding: 20px;
+	background-color: #A9A9A9;
+}
+
+.list {
+	border-collapse: collapse;
+	width: 90%;
+	border-top: 1px solid #DDDDDD;
+	border-left: 1px solid #DDDDDD;
+	margin-bottom: 20px;
+
+	background-color: #EFEFEF;
+
+}
+.list td {
+	border-right: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+}
+.list tbody tr:hover td {
+	background-color: #FFFFCB;
+}
+.list .left {
+	text-align: left;
+	padding: 7px;
+}
+.list .right {
+	text-align: right;
+	padding: 7px;
+}
+.list .center {
+	text-align: center;
+	padding: 7px;
+}
+.top
+{
+		padding: 30px;
+		font-size: 25px;
+		color: red;
+}
+.button_add{
+	font-family: Arial;
+	font-size: 12px;
+	padding: 10px;
+}
+.text{
+	font-size: 20px;
+	font-family: Arial;
+}
+
+ #menu ul {
+  margin: 0;  
+  padding: 0;  
+  list-style: none;
+  }
+  #menu
+  ul li {  
+  margin: 0;  
+  padding: 0;  
+  display: inline; /* Các phần tử li sẽ ở trên một dòng*/}
+  
+  #menu li a {  
+  color: #333333;  
+  font-weight: bold;  
+  padding: 0 10px;  
+  border-right: 1px solid #A2D2EA;  
+  text-transform: uppercase;  
+  text-decoration: none;
+  }
+  #menu 
+  li a:hover,
+  
+  #menu 
+  li a:active,
+  
+  #menu 
+  li a:focus {  
+  color: #CC0000;
+  }
+  #menu 
+  li a.active {  
+  color: #CC0000; }  
+  
+  #menu {
+  background: #F1F8FC;  
+  height: 30px;  
+  line-height: 30px;  
+  width: 950px;  
+  margin: 100 auto 30px auto; /* Căn giữa màn hình */  
+  border: 1px solid #A2D2EA;  
+  text-align: center;
+
+}
