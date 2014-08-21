@@ -60,6 +60,7 @@ function age($bday){
                 </tr>
         <?php } ?> 
             </table>
+        <br>
         <?php
         for($page=0; $page<$totalPages; $page++){
             echo "<a href='list_users.php?page=$page'>$page</a>"; ?>

@@ -15,9 +15,11 @@ $row=  mysqli_fetch_array($result);
         <style>
             h1{color:#336600}
             img{float:left;}
-            table{margin-left:600px}
+            table{font-size:20px;
+                  margin-left:600px}
             .content{margin-left:400px;
                      margin-right:450px;
+                     font-size:19px;
                      text-align:left}
             .border{padding-left:10px;
                     padding-top:7px;
@@ -71,7 +73,7 @@ $row=  mysqli_fetch_array($result);
         </table>
         
         <br>
-        <p style="margin-left:400px; text-align:left">
+        <p style="margin-left:400px; font-size:19px; text-align:left">
             About me: <br>
             <?php echo $row['about']?>
         </p>

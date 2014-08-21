@@ -2,6 +2,7 @@
     <style>
         body{text-align:center;
              background:url("clover-wide.jpg")}
+        input{height: 30px}
     </style>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <body>
