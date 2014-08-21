@@ -80,5 +80,5 @@ function test_input($data) {
     header("Location:user_detail.php?id=".$_GET['id']);
   }else{
     echo "No user found. "; ?>
-<a href="list_users.php">Go back</a>?
+<a href="list_users.php?page=0">Go back</a>?
   <?php } ?>

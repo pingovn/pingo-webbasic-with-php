@@ -1,9 +1,17 @@
 <?php
 include 'title.php';
 include 'connect.php';
-$result=mysqli_query($link,'SELECT * FROM users') or die(mysqli_error($link));
 ?>
 
+<?php
+$currentPage=$_GET['page'];
+$perPage=4;
+$totalRows=  mysqli_num_rows(mysqli_query($link,"SELECT * FROM users")) or die(mysqli_error($link));
+$totalPages= intval(ceil($totalRows / $perPage));
+$start=$currentPage*$perPage;
+$query="SELECT * FROM users ORDER BY id ASC LIMIT $start,$perPage";
+$result=  mysqli_query($link, $query);
+?>
 <?php
 function age($bday){
          $date=explode("-",$bday);
@@ -14,8 +22,9 @@ function age($bday){
     <head>
         <title>Users</title>
         <style>
-       
-          table{border-style:solid;
+          h1{color:#003300}
+          table{font-size:20px;
+                border-style:solid;
                 border-width:5px;
                 border-color:#003300}
           td{border-style:solid;
@@ -51,6 +60,11 @@ function age($bday){
                 </tr>
         <?php } ?> 
             </table>
+        <?php
+        for($page=0; $page<$totalPages; $page++){
+            echo "<a href='list_users.php?page=$page'>$page</a>"; ?>
+        &nbsp;
+        <?php } ?>
     </body>
 </html>
 <?php mysqli_close($link); ?>

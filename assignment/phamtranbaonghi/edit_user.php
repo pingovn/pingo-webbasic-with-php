@@ -10,10 +10,13 @@ $row= mysqli_fetch_array($result);
         <title>Update User</title>
     <style>
         h1,body{text-align: center;
-                color:#336600}
-        table{font-size:20px;
+                color:#339900}
+        td{padding-left:8px;
+           padding-top:3px}
+        table{font-size:24px;
               border-style:inset;
-              border-color:#33CC33}
+              border-color:#336600;
+              border-width:3px}
         input{height: 30px}
     </style>    
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">

@@ -7,9 +7,12 @@ include 'title.php';
     <style>
         h1,body{text-align: center;
                 color:#336600}
-        table{font-size:20px;
+        td{padding-left:8px;
+           padding-top:3px}
+        table{font-size:22px;
               border-style:inset;
-              border-color:#33CC33}
+              border-color:#336600;
+              border-width:3px}
         input{height: 30px}
     </style>    
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">

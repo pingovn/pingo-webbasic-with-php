@@ -8,7 +8,7 @@
         <form
            action="process.php"
            method="post"/>
-        Họ và tên học viên: Bảo Nghi, Phương Hà, Ngọc Anh
+        Họ và tên học viên: Phạm Trần Bảo Nghi, Bùi Thị Phương Hà, Trần Ngọc Anh
         <br>
         <input
             type="submit"

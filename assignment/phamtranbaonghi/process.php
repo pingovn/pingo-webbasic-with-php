@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['users'])){
-    header("Location:list_users.php");
+    header("Location:list_users.php?page=0");
 } elseif (isset($_POST['create'])){
     header("Location:create_user.php");
 } elseif (isset($_POST['login'])) {

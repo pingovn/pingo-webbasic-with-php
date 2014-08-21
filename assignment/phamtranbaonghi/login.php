@@ -6,11 +6,17 @@ include 'title.php';
     <head>
         <title>Login</title>
     <style>
-        table{ text-align: center;
+        table{ font-size:21px;
+               text-align: center;
                border-style: inset;
-               border-color: #33CC33;}
-        th{font-size: 25;
+               border-color: #66CC00;
+               border-width: 4px}
+        td{padding-left:8px;
+           padding-top:3px;
            color: #336600}
+        th{font-size: 30px;
+           color:rgb(61,166,30)}
+        input{height: 26px}
     </style>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     </head>  
@@ -23,9 +29,8 @@ include 'title.php';
                 <th></th>
                 <th>
                     User Login
-                    <br>
                     <?php if(isset($_SESSION['error'])){ ?>
-            <p style="font-size:14"><?php echo "Login fail! Please re-enter username and password.";}?></p>
+            <p style="font-size:16"><?php echo "Login fail! Please re-enter username and password.";}?></p>
                 </th>
             </tr>
             <tr>
@@ -35,7 +40,7 @@ include 'title.php';
                         type="text"
                         name="user"
                         id="user"
-                        size="28"/>
+                        size="36"/>
                 </td>
             </tr>
             <tr>
@@ -45,7 +50,7 @@ include 'title.php';
                         type="password"
                         name="pass"
                         id="pass"
-                        size="28"/>
+                        size="36"/>
                 </td>
             </tr>
             <tr>

@@ -40,7 +40,7 @@ Failed to create user. <a href="create_user.php">Try again</a>.
          $query3="UPDATE users SET avatar='".$avatar."'";
          mysqli_query($link, $query3);
          move_uploaded_file($tmp_name,$avatar);
-         header("Location:list_users.php");
+         header("Location:list_users.php?page=0");
      }else{
      echo "Wrong file avatar. "; ?> 
         <a href="create_user.php">Use another file</a>.
